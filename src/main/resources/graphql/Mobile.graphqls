@@ -1,0 +1,20 @@
+type Mobile
+{
+    mobileId: ID!
+    mobileName: String!
+    mobilePrice: String!
+    mobileRam: String!
+    mobileStorage: String!
+}
+
+type Query
+{
+     getAllMobiles: [Mobile]
+}
+
+type Mutation
+{
+    createMobile(mobileName: String!, mobilePrice: String!, mobileRam: String!, mobileStorage: String!): Mobile
+    deleteMobile(mobileId: ID!): Boolean
+    updateMobile(mobileId: ID!, mobileName: String!, mobilePrice: String!, mobileRam: String!, mobileStorage: String!): Mobile
+}
